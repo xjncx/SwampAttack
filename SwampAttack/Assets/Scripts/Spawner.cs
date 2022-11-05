@@ -83,10 +83,3 @@ public class Wave
     public float Delay;
     public int Count;
 }
-
-//private void InstantiateEnemy()
-//{
-//    Enemy enemy = Instantiate(_currentWave.EnemyTemplate, _spawnPoint.position, _spawnPoint.rotation, _spawnPoint).GetComponent<Enemy>();
-//    enemy.Init(_player);
-//    enemy.Dying += OnEnemyDying;
-//}

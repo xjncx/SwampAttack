@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Shop : MonoBehaviour
 {
@@ -14,12 +15,14 @@ public class Shop : MonoBehaviour
         for (int i = 0; i < _weapons.Count; i++)
         {
             AddItem(_weapons[i]);
+
         }
     }
 
     private void AddItem(Weapon weapon)
     {
         var view = Instantiate(_template, _itemContainer.transform);
+        view.SellButtonClick += OnSellButtonClick;
         view.Render(weapon);
     }
 
@@ -32,9 +35,10 @@ public class Shop : MonoBehaviour
     {
         if(weapon.Price <= _player.Money)
         {
-            _player.BuyWeapon(weapon);
-            weapon.Buy();
+            var weaponToPlayer = Instantiate(weapon);
+            _player.BuyWeapon(weaponToPlayer);
+            weaponToPlayer.Buy();
+            view.SellButtonClick -= OnSellButtonClick;
         }
     }
-
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6702613975332216601}
   - component: {fileID: 1740826256255881836}
   m_Layer: 0
-  m_Name: Pistol Bullet
+  m_Name: Eagle Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 9f6f9eaccc76afb48bdf936c94da98a0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6886792, g: 0, b: 0.08990471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
